@@ -1,4 +1,4 @@
-// src/App.js
+
 import React, { useState } from "react";
 import TextInputForm from "./components/TextInputForm.js";
 import FilteredResponse from "./components/FilteredResponse.js";
@@ -16,8 +16,8 @@ function App() {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Bajaj Finserv Health Dev Challenge </h1> {/* Roll number as title */}
-      {/* Component to handle JSON input and API call */}
+      <h1>Bajaj Finserv Health Dev Challenge </h1> 
+     
       <TextInputForm setResponseData={setResponseData} on/>
       
       { (
@@ -28,7 +28,7 @@ function App() {
             onChange={setSelectedFilters}
             placeholder="Multi Filter"
           />
-          {/* Component to handle filtered response display */}
+        
           <FilteredResponse responseData={responseData} selectedFilters={selectedFilters} />
         </div>
       )}

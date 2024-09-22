@@ -1,4 +1,4 @@
-// src/components/TextInputForm.js
+
 import React, { useState } from "react";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css'; // Make sure Bootstrap is imported
@@ -18,7 +18,7 @@ function TextInputForm({ setResponseData }) {
       }
 
       // Call backend API
-      const response = await axios.post("http://localhost:3001/bfhl", parsedJson);
+      const response = await axios.post("https://bfhl-challenge-lc70.onrender.com/bfhl", parsedJson);
 
       setResponseData(response.data);
       setError(""); // Clear error if successful

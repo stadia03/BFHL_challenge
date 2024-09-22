@@ -1,4 +1,4 @@
-// src/components/FilteredResponse.js
+
 import React from "react";
 
 function FilteredResponse({ responseData, selectedFilters }) {
