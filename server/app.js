@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from "cors";
-import { errorHandler } from './middleware/errorhandler.js';
+import { errorHandler } from './middleware/errorHandler.js';
 
 import bfhlRoutes from './routes/bfhlRoutes.js';
 
