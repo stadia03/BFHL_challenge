@@ -30,7 +30,8 @@ function TextInputForm({ setResponseData }) {
   return (
     <div className="container">
       <div className="form-group">
-        <label className="mb-2">API Input</label>
+        <br></br>
+        <h4 className="mb-2">API Input</h4>
         <textarea
           className="form-control"
           value={jsonInput}
@@ -48,6 +49,12 @@ function TextInputForm({ setResponseData }) {
       >
         Submit
       </button>
+      <br></br>
+      
+      <small className="form-text text-muted mt-2">
+      Please note: The backend may take up to 2 minutes to load after periods of inactivity due to server optimization. Thank you for your patience!
+      </small>
+      <br></br>
     </div>
   );
 }

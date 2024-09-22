@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
 import TextInputForm from "./components/TextInputForm.js";
 import FilteredResponse from "./components/FilteredResponse.js";
 import Select from 'react-select';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
 
 function App() {
   const [responseData, setResponseData] = useState(null);
@@ -15,23 +15,37 @@ function App() {
   ];
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Bajaj Finserv Health Dev Challenge </h1> 
-     
-      <TextInputForm setResponseData={setResponseData} on/>
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          <h1 className="text-center">Bajaj Finserv Health Dev Challenge</h1>
+        </div>
+      </div>
+
+      <div className="row justify-content-center">
+        <div className="col-12 col-md-8">
+          <TextInputForm setResponseData={setResponseData} on />
+        </div>
+      </div>
       
-      { (
-        <div style={{ marginTop: "20px" }}>
-          <Select
-            isMulti
-            options={filterOptions}
-            onChange={setSelectedFilters}
-            placeholder="Multi Filter"
-          />
-        
-          <FilteredResponse responseData={responseData} selectedFilters={selectedFilters} />
+      {responseData && (
+        <div className="row justify-content-center mt-4">
+          <div className="col-12 col-md-8">
+            <Select
+              isMulti
+              options={filterOptions}
+              onChange={setSelectedFilters}
+              placeholder="Multi Filter"
+            />
+          </div>
         </div>
       )}
+      
+      <div className="row justify-content-center mt-3">
+        <div className="col-12 col-md-8">
+          <FilteredResponse responseData={responseData} selectedFilters={selectedFilters} />
+        </div>
+      </div>
     </div>
   );
 }
